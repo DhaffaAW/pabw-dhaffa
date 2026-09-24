@@ -94,6 +94,56 @@
 
       <section id="tambah-pemain">
         <h2>Tambah Pemain Badminton</h2>
+
+        <form action="/simpan" method="post">
+          <p>
+            <label for="nama-pemain">Nama Pemain</label><br />
+            <input type="text" id="nama-pemain" name="nama-pemain" required />
+          </p>
+
+          <p>
+            <label for="negara">Negara</label><br />
+            <input type="text" id="negara" name="negara" required />
+          </p>
+
+          <p>
+            <label for="ranking">Ranking Dunia</label><br />
+            <input
+              type="number"
+              id="ranking"
+              name="ranking"
+              min="1"
+              max="999"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="usia">Usia</label><br />
+            <input
+              type="number"
+              id="usia"
+              name="usia"
+              min="10"
+              max="60"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="kategori">Kategori</label><br />
+            <select id="kategori" name="kategori" required>
+              <option value="">Pilih kategori</option>
+              <option>Tunggal Putra</option>
+              <option>Tunggal Putri</option>
+              <option>Ganda Putra</option>
+              <option>Ganda Putri</option>
+              <option>Ganda Campuran</option>
+            </select>
+          </p>
+
+          <button type="submit">Simpan</button>
+        </form>
       </section>
     </main>
 
