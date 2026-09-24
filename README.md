@@ -16,4 +16,4 @@ Topik halaman saya: Pemain Badminton Favorit Saya
 
 ## Catatan Penggunaan AI
 
-Tulis bagian mana yang dibantu AI dan bagian mana yang Anda kerjakan sendiri, atau tulis: tidak memakai AI.
+Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
