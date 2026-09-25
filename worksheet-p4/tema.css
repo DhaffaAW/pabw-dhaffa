@@ -3,11 +3,15 @@
     --color-bg: #0f172a;
     --color-fg: #e2e8f0;
     --color-surface: #1e293b;
-    --color-border: #334155;
+    --color-border: #64748b;
     --color-primary: #7da9f7;
     --color-danger: #ff8a8a;
     --color-focus: #ffc000;
     --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.45);
+  }
+
+  button {
+    color: #0f172a;
   }
 }
 
@@ -21,8 +25,12 @@
   --color-bg: #0f172a;
   --color-fg: #e2e8f0;
   --color-surface: #1e293b;
-  --color-border: #334155;
+  --color-border: #64748b;
   --color-primary: #7da9f7;
   --color-danger: #ff8a8a;
   --color-focus: #ffc000;
+}
+
+:root:has(#tema:checked) button {
+  color: #0f172a;
 }
