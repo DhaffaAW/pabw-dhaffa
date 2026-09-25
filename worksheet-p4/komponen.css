@@ -52,3 +52,43 @@ figure img {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-1);
 }
+
+/* ===================== */
+/* LEMBAR E */
+/* ===================== */
+
+.form-kolom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+button {
+  font: inherit;
+}
+
+/* Fokus keyboard */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Validasi */
+input:user-invalid,
+select:user-invalid {
+  border-color: var(--color-danger);
+  border-width: 2px;
+}

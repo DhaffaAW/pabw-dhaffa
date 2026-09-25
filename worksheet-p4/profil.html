@@ -127,23 +127,23 @@
           <section id="tambah-pemain">
             <h2>Tambah Pemain Badminton</h2>
             <form action="/simpan" method="post">
-              <p>
-                <label for="nama-pemain">Nama Pemain</label><br />
+              <div class="form-kolom">
+                <label for="nama-pemain">Nama Pemain</label>
                 <input
                   type="text"
                   id="nama-pemain"
                   name="nama-pemain"
                   required
                 />
-              </p>
+              </div>
 
-              <p>
-                <label for="negara">Negara</label><br />
+              <div class="form-kolom">
+                <label for="negara">Negara</label>
                 <input type="text" id="negara" name="negara" required />
-              </p>
+              </div>
 
-              <p>
-                <label for="ranking">Ranking Dunia</label><br />
+              <div class="form-kolom">
+                <label for="ranking">Ranking Dunia</label>
                 <input
                   type="number"
                   id="ranking"
@@ -152,10 +152,10 @@
                   max="999"
                   required
                 />
-              </p>
+              </div>
 
-              <p>
-                <label for="usia">Usia</label><br />
+              <div class="form-kolom">
+                <label for="usia">Usia</label>
                 <input
                   type="number"
                   id="usia"
@@ -164,10 +164,10 @@
                   max="60"
                   required
                 />
-              </p>
+              </div>
 
-              <p>
-                <label for="kategori">Kategori</label><br />
+              <div class="form-kolom">
+                <label for="kategori">Kategori</label>
                 <select id="kategori" name="kategori" required>
                   <option value="">Pilih kategori</option>
                   <option>Tunggal Putra</option>
@@ -176,7 +176,8 @@
                   <option>Ganda Putri</option>
                   <option>Ganda Campuran</option>
                 </select>
-              </p>
+              </div>
+
               <button type="submit">Simpan</button>
             </form>
           </section>
