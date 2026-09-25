@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemain Badminton Favorit Saya</title>
+
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="components.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+
+  <body id="top">
+    <nav class="top-nav">
+      <div class="nav-logo">Pemain Badminton Favorit Saya</div>
+
+      <div class="nav-menu">
+        <a href="#top">Beranda</a>
+        <a href="#pemain-favorit">Pemain Favorit</a>
+        <a href="#tambah-pemain">Tambah Pemain</a>
+      </div>
+    </nav>
+
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h2>An Se-young</h2>
+        <p class="hero-subtitle">Pemain Badminton Favorit Saya</p>
+        <p>
+          An Se-young adalah salah satu pemain tunggal putri asal Korea Selatan
+          yang menjadi favorit saya.
+        </p>
+      </div>
+    </section>
+
+    <main>
+      <div class="content-grid">
+        <section id="pemain-favorit">
+          <h2>Daftar Pemain Badminton Favorit</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Nama Pemain</th>
+                <th scope="col">Negara</th>
+                <th scope="col">Ranking</th>
+                <th scope="col">Usia</th>
+                <th scope="col">Kategori</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th scope="row">An Se-young</th>
+                <td>Korea Selatan</td>
+                <td>1</td>
+                <td>24</td>
+                <td>Tunggal Putri</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Anthony Sinisuka Ginting</th>
+                <td>Indonesia</td>
+                <td>49</td>
+                <td>29</td>
+                <td>Tunggal Putra</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Kim Won Ho</th>
+                <td>Korea Selatan</td>
+                <td>1</td>
+                <td>27</td>
+                <td>Ganda Putra</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Seo Seung Jae</th>
+                <td>Korea Selatan</td>
+                <td>1</td>
+                <td>29</td>
+                <td>Ganda Putra</td>
+              </tr>
+
+              <tr>
+                <th scope="row">Alwi Farhan</th>
+                <td>Indonesia</td>
+                <td>10</td>
+                <td>21</td>
+                <td>Tunggal Putra</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Foto Pemain</h2>
+          <figure class="player-photo">
+            <img
+              src="an se-young.webp"
+              alt="An Se-young sedang bertanding dalam pertandingan Kejuaraan Dunia BWF 2026"
+              width="640"
+              height="360"
+              loading="lazy"
+            />
+
+            <figcaption>
+              An Se-young, salah satu pemain tunggal putri asal Korea Selatan
+              yang menjadi favorit saya.
+            </figcaption>
+          </figure>
+        </section>
+
+        <div class="sidebar">
+          <aside class="profile-card">
+            <h2>Profil Singkat</h2>
+            <ul>
+              <li><strong>Nama Lengkap:</strong> An Se-young</li>
+              <li><strong>Negara:</strong> Korea Selatan</li>
+              <li><strong>Ranking Dunia:</strong> 1</li>
+              <li><strong>Usia:</strong> 24</li>
+              <li><strong>Kategori:</strong> Tunggal Putri</li>
+            </ul>
+          </aside>
+
+          <section id="tambah-pemain">
+            <h2>Tambah Pemain Badminton</h2>
+            <form action="/simpan" method="post">
+              <p>
+                <label for="nama-pemain">Nama Pemain</label><br />
+                <input
+                  type="text"
+                  id="nama-pemain"
+                  name="nama-pemain"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="negara">Negara</label><br />
+                <input type="text" id="negara" name="negara" required />
+              </p>
+
+              <p>
+                <label for="ranking">Ranking Dunia</label><br />
+                <input
+                  type="number"
+                  id="ranking"
+                  name="ranking"
+                  min="1"
+                  max="999"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="usia">Usia</label><br />
+                <input
+                  type="number"
+                  id="usia"
+                  name="usia"
+                  min="10"
+                  max="60"
+                  required
+                />
+              </p>
+
+              <p>
+                <label for="kategori">Kategori</label><br />
+                <select id="kategori" name="kategori" required>
+                  <option value="">Pilih kategori</option>
+                  <option>Tunggal Putra</option>
+                  <option>Tunggal Putri</option>
+                  <option>Ganda Putra</option>
+                  <option>Ganda Putri</option>
+                  <option>Ganda Campuran</option>
+                </select>
+              </p>
+              <button type="submit">Simpan</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Dhaffa Arya Wiguna</p>
+    </footer>
+  </body>
+</html>
