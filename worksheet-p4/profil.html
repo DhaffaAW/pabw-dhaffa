@@ -98,94 +98,93 @@
             </tbody>
           </table>
 
-          <h2>Foto Pemain</h2>
-          <figure class="player-photo">
-            <img
-              src="an se-young.webp"
-              alt="An Se-young sedang bertanding dalam pertandingan Kejuaraan Dunia BWF 2026"
-              width="640"
-              height="360"
-              loading="lazy"
-            />
+          <div class="foto-profil">
+            <div>
+              <h2>Foto Pemain</h2>
 
-            <figcaption>
-              An Se-young, salah satu pemain tunggal putri asal Korea Selatan
-              yang menjadi favorit saya.
-            </figcaption>
-          </figure>
+              <figure class="player-photo">
+                <img
+                  src="an se-young.webp"
+                  alt="An Se-young sedang bertanding dalam pertandingan Kejuaraan Dunia BWF 2026"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+
+                <figcaption>
+                  An Se-young, salah satu pemain tunggal putri asal Korea
+                  Selatan yang menjadi favorit saya.
+                </figcaption>
+              </figure>
+            </div>
+
+            <aside class="profile-card">
+              <h2>Profil Singkat</h2>
+              <ul>
+                <li><strong>Nama Lengkap:</strong> An Se-young</li>
+                <li><strong>Negara:</strong> Korea Selatan</li>
+                <li><strong>Ranking Dunia:</strong> 1</li>
+                <li><strong>Usia:</strong> 24</li>
+                <li><strong>Kategori:</strong> Tunggal Putri</li>
+              </ul>
+            </aside>
+          </div>
         </section>
-
-        <div class="sidebar">
-          <aside class="profile-card">
-            <h2>Profil Singkat</h2>
-            <ul>
-              <li><strong>Nama Lengkap:</strong> An Se-young</li>
-              <li><strong>Negara:</strong> Korea Selatan</li>
-              <li><strong>Ranking Dunia:</strong> 1</li>
-              <li><strong>Usia:</strong> 24</li>
-              <li><strong>Kategori:</strong> Tunggal Putri</li>
-            </ul>
-          </aside>
-
-          <section id="tambah-pemain">
-            <h2>Tambah Pemain Badminton</h2>
-            <form action="/simpan" method="post">
-              <div class="form-kolom">
-                <label for="nama-pemain">Nama Pemain</label>
-                <input
-                  type="text"
-                  id="nama-pemain"
-                  name="nama-pemain"
-                  required
-                />
-              </div>
-
-              <div class="form-kolom">
-                <label for="negara">Negara</label>
-                <input type="text" id="negara" name="negara" required />
-              </div>
-
-              <div class="form-kolom">
-                <label for="ranking">Ranking Dunia</label>
-                <input
-                  type="number"
-                  id="ranking"
-                  name="ranking"
-                  min="1"
-                  max="999"
-                  required
-                />
-              </div>
-
-              <div class="form-kolom">
-                <label for="usia">Usia</label>
-                <input
-                  type="number"
-                  id="usia"
-                  name="usia"
-                  min="10"
-                  max="60"
-                  required
-                />
-              </div>
-
-              <div class="form-kolom">
-                <label for="kategori">Kategori</label>
-                <select id="kategori" name="kategori" required>
-                  <option value="">Pilih kategori</option>
-                  <option>Tunggal Putra</option>
-                  <option>Tunggal Putri</option>
-                  <option>Ganda Putra</option>
-                  <option>Ganda Putri</option>
-                  <option>Ganda Campuran</option>
-                </select>
-              </div>
-
-              <button type="submit">Simpan</button>
-            </form>
-          </section>
-        </div>
       </div>
+
+      <section id="tambah-pemain">
+        <h2>Tambah Pemain Badminton</h2>
+
+        <form action="/simpan" method="post">
+          <div class="form-kolom">
+            <label for="nama-pemain">Nama Pemain</label>
+            <input type="text" id="nama-pemain" name="nama-pemain" required />
+          </div>
+
+          <div class="form-kolom">
+            <label for="negara">Negara</label>
+            <input type="text" id="negara" name="negara" required />
+          </div>
+
+          <div class="form-kolom">
+            <label for="ranking">Ranking Dunia</label>
+            <input
+              type="number"
+              id="ranking"
+              name="ranking"
+              min="1"
+              max="999"
+              required
+            />
+          </div>
+
+          <div class="form-kolom">
+            <label for="usia">Usia</label>
+            <input
+              type="number"
+              id="usia"
+              name="usia"
+              min="10"
+              max="60"
+              required
+            />
+          </div>
+
+          <div class="form-kolom">
+            <label for="kategori">Kategori</label>
+            <select id="kategori" name="kategori" required>
+              <option value="">Pilih kategori</option>
+              <option>Tunggal Putra</option>
+              <option>Tunggal Putri</option>
+              <option>Ganda Putra</option>
+              <option>Ganda Putri</option>
+              <option>Ganda Campuran</option>
+            </select>
+          </div>
+
+          <button type="submit">Simpan</button>
+        </form>
+      </section>
     </main>
 
     <footer>

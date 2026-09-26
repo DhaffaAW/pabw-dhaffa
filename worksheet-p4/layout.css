@@ -43,6 +43,18 @@ footer {
   font-size: var(--text-sm);
 }
 
+.foto-profil {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  align-items: start;
+}
+
+.profile-card {
+  margin-top: 4.5rem;
+}
+
 @media (max-width: 900px) {
   .content-grid {
     grid-template-columns: 1fr;
