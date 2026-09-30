@@ -40,3 +40,119 @@ Kriteria selesai saya:
 
 - Mengubah warna utama melalui token dapat mengubah tampilan tombol, header, dan elemen penting lainnya secara konsisten.
 - Layout halaman menggunakan Grid Layout untuk menata tabel dan form.
+
+## Pertemuan 5 - Layout Modern: Flexbox dan Grid
+
+Pada pertemuan 5 ini saya mempelajari dan menerapkan CSS Grid dan Flexbox untuk membuat layout halaman yang responsif.
+
+# Pertemuan 5 - CSS Grid dan Flexbox
+
+## Bagian A – Perencanaan Layout
+
+### A.1 Kerangka Halaman
+
+| Bagian Halaman | Peran                              | Nilai yang Saya Pakai |
+| -------------- | ---------------------------------- | --------------------- |
+| Baris pertama  | Kepala halaman (logo, judul, menu) | auto                  |
+| Baris kedua    | Isi utama (sidebar dan konten)     | 1fr                   |
+| Baris ketiga   | Kaki halaman                       | auto                  |
+| Kolom isi      | Sidebar tetap, konten lentur       | 16rem 1fr             |
+
+### A.2 Sumbu dan Arah
+
+| Komponen                | Arah  | Sumbu Utama | Sumbu Silang |
+| ----------------------- | ----- | ----------- | ------------ |
+| Navbar                  | Baris | Horizontal  | Vertikal     |
+| Baris tombol pada kartu | Baris | Horizontal  | Vertikal     |
+| Daftar menu samping     | Kolom | Vertikal    | Horizontal   |
+
+### A.3 Kapan Flex, Kapan Grid
+
+| Bagian                  | Pilihan Saya | Alasan Satu Baris                                          |
+| ----------------------- | ------------ | ---------------------------------------------------------- |
+| Kepala halaman          | Flex         | Menyusun judul, navigasi, dan tombol tema dalam satu baris |
+| Isi dua kolom           | Grid         | Membagi sidebar dan konten utama menjadi dua kolom         |
+| Galeri kartu            | Grid         | Jumlah kolom dapat berubah otomatis sesuai ukuran layar    |
+| Isi di dalam satu kartu | Flex         | Konten kartu disusun dari atas ke bawah                    |
+
+---
+
+## Bagian C – Grid Responsif
+
+### C.3 Yang Dipakai untuk Lebar
+
+| Nilai                 | Artinya                                          | Dipakai Untuk |
+| --------------------- | ------------------------------------------------ | ------------- |
+| 1fr                   | Membagi ruang sisa setelah ukuran tetap dihitung | Kolom konten  |
+| 16rem                 | Lebar tetap yang ikut ukuran huruf akar          | Sidebar       |
+| minmax(16rem, 1fr)    | Batas bawah dan batas atas satu jalur            | Galeri        |
+| repeat(auto-fit, ...) | Jumlah jalur mengikuti ruang yang tersedia       | Galeri        |
+
+---
+
+## Bagian D – Penempatan Grid
+
+### D.3 Pilihan Penempatan Saya
+
+| Blok              | Cara         | Potongan Kode                     |
+| ----------------- | ------------ | --------------------------------- |
+| Kartu An Se-young | Span         | .sorotan { grid-column: span 2; } |
+| Sidebar           | Area bernama | .sidebar { grid-area: sisi; }     |
+
+---
+
+## Bagian E – Penyelesaian Masalah Layout
+
+### E.3 Item Meluber Keluar Kotak
+
+| Gejala                                             | Penyebab yang Paling Sering                             | Perbaikan                                                                                         |
+| -------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| Kotak melewati tepi kanan layar pada ukuran 360 px | Lebar minimum item lebih besar dari ruang yang tersedia | Mengecilkan nilai `minmax()` pada galeri atau mengubah jumlah kolom menjadi satu pada layar kecil |
+| Tinggi baris melompat                              | `align-items: stretch` meregangkan item terpendek       | `align-items: flex-start`                                                                         |
+| Baris turun tak diinginkan                         | Lebar minimum item lebih besar dari sisa ruang          | Batas bawah `minmax()` dikecilkan                                                                 |
+
+---
+
+## Bagian F – Evaluasi
+
+### F.1 Hasil Pengujian
+
+| Periksa                   | Hasil |
+| ------------------------- | ----- |
+| Kerangka halaman          | ✔     |
+| Jarak memakai gap         | ✔     |
+| Lebar memakai fr atau rem | ✔     |
+| Galeri adaptif            | ✔     |
+| Tidak meluber             | ✔     |
+| Tema gelap Pertemuan 4    | ✔     |
+
+### F.2 Potongan Kode yang Paling Sering Dipakai
+
+| Potongan Kode                        | Dipakai Pada                  |
+| ------------------------------------ | ----------------------------- |
+| repeat(auto-fit, minmax(16rem, 1fr)) | Galeri kartu pemain badminton |
+
+### F.3 Penilaian Mandiri
+
+| Bagian                                | Bobot   | Nilai Saya | Bukti                               |
+| ------------------------------------- | ------- | ---------- | ----------------------------------- |
+| Kerangka halaman: baris dan kolom     | 30      | 30         | Baris grid terbaca, tiga baris utuh |
+| Flexbox: navbar dan isi kartu         | 25      | 25         | Gap dipakai, tidak ada float        |
+| Grid: galeri adaptif dan penempatan   | 30      | 30         | Kolom berubah, area bernama dipakai |
+| Kerapian: nol luberan, nol !important | 15      | 15         | Lolos pada dua lebar uji            |
+| **TOTAL**                             | **100** | **100**    | Layout berjalan sesuai tujuan       |
+
+## F.4 Tiket Keluar
+
+| Pertanyaan                                                         | Jawaban                                                                                                                                                                                                     |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bagian halaman mana yang memakai flex, dan mengapa flex yang cocok | Bagian navbar, karena elemen-elemen di dalamnya disusun dalam satu baris secara horizontal sehingga lebih mudah diatur menggunakan Flexbox.                                                                 |
+| Bagian halaman mana yang memakai grid, dan mengapa grid yang cocok | Bagian galeri kartu pemain, karena Grid memudahkan pengaturan banyak kartu dalam beberapa kolom yang responsif sesuai ukuran layar.                                                                         |
+| Satu kasus meluber yang Anda temui hari ini, dan perbaikannya      | Kartu pemain meluber pada lebar 360 px karena ukuran minimum kolom terlalu besar. Perbaikannya menggunakan media query dan pengaturan Grid yang lebih fleksibel agar kartu dapat menyesuaikan ukuran layar. |
+
+### F.5 Catatan untuk Pengampu
+
+| Keterangan                         | Isi                                                         |
+| ---------------------------------- | ----------------------------------------------------------- |
+| Bagian yang paling sulit           | Mengatur tampilan responsif pada layar kecil                |
+| Bagian yang ingin dibahas di kelas | Grid Area, Span, dan Responsive Layout menggunakan CSS Grid |
