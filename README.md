@@ -45,8 +45,6 @@ Kriteria selesai saya:
 
 Pada pertemuan 5 ini saya mempelajari dan menerapkan CSS Grid dan Flexbox untuk membuat layout halaman yang responsif.
 
-# Pertemuan 5 - CSS Grid dan Flexbox
-
 ## Bagian A – Perencanaan Layout
 
 ### A.1 Kerangka Halaman
@@ -131,16 +129,6 @@ Pada pertemuan 5 ini saya mempelajari dan menerapkan CSS Grid dan Flexbox untuk 
 | Potongan Kode                        | Dipakai Pada                  |
 | ------------------------------------ | ----------------------------- |
 | repeat(auto-fit, minmax(16rem, 1fr)) | Galeri kartu pemain badminton |
-
-### F.3 Penilaian Mandiri
-
-| Bagian                                | Bobot   | Nilai Saya | Bukti                               |
-| ------------------------------------- | ------- | ---------- | ----------------------------------- |
-| Kerangka halaman: baris dan kolom     | 30      | 30         | Baris grid terbaca, tiga baris utuh |
-| Flexbox: navbar dan isi kartu         | 25      | 25         | Gap dipakai, tidak ada float        |
-| Grid: galeri adaptif dan penempatan   | 30      | 30         | Kolom berubah, area bernama dipakai |
-| Kerapian: nol luberan, nol !important | 15      | 15         | Lolos pada dua lebar uji            |
-| **TOTAL**                             | **100** | **100**    | Layout berjalan sesuai tujuan       |
 
 ## F.4 Tiket Keluar
 
