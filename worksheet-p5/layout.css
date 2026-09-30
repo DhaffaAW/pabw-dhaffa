@@ -24,12 +24,6 @@ main {
   padding-block: var(--space-6);
 }
 
-.content-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--space-4);
-}
-
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -46,18 +40,54 @@ footer {
 .foto-profil {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  grid-template-areas: "foto profil";
   gap: var(--space-4);
   margin-top: var(--space-6);
   align-items: start;
 }
 
+.player-photo {
+  grid-area: foto;
+}
+
 .profile-card {
-  margin-top: 4.5rem;
+  grid-area: profil;
+}
+
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+.isi {
+  display: grid;
+  grid-template-columns: 16rem 1fr;
+  grid-template-areas: "sisi utama";
+  gap: var(--space-6);
+  gap: 3rem;
+}
+
+.sidebar {
+  grid-area: sisi;
+}
+
+.utama {
+  grid-area: utama;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
 }
 
 @media (max-width: 900px) {
-  .content-grid {
+  .isi {
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "sisi"
+      "utama";
   }
 
   .top-nav {
