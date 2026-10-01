@@ -144,3 +144,67 @@ Pada pertemuan 5 ini saya mempelajari dan menerapkan CSS Grid dan Flexbox untuk 
 | ---------------------------------- | ----------------------------------------------------------- |
 | Bagian yang paling sulit           | Mengatur tampilan responsif pada layar kecil                |
 | Bagian yang ingin dibahas di kelas | Grid Area, Span, dan Responsive Layout menggunakan CSS Grid |
+
+# Worksheet Pertemuan 6 – Responsive
+
+## Bagian A – Pasang Viewport dan Cari Lebar Tetap
+
+### A.2 Cari Elemen Berlebar Tetap
+
+| Berkas dan Pemilih  | Lebar Sekarang                | Ganti Dengan    |
+| ------------------- | ----------------------------- | --------------- |
+| layout.css .sidebar | Tidak menggunakan lebar tetap | Tetap responsif |
+| komponen.css .kartu | Tidak menggunakan lebar tetap | Tetap responsif |
+| base.css img        | max-width: 100%               | Tetap responsif |
+
+---
+
+## Bagian C – Tambah Dua Titik Henti
+
+### C.2 Keputusan Titik Henti
+
+| Titik Henti | Yang Berubah                             | Kenapa di Lebar Itu                                                          |
+| ----------- | ---------------------------------------- | ---------------------------------------------------------------------------- |
+| 48rem       | Galeri dari satu kolom menjadi dua kolom | Ruang layar sudah cukup untuk menampilkan dua kartu tanpa terlihat sempit    |
+| 60rem       | Sidebar bersanding dengan konten         | Ruang layar desktop lebih luas sehingga layout dua kolom lebih nyaman dibaca |
+
+---
+
+## Bagian E – Periksa, Tiket Keluar, dan Penilaian Mandiri
+
+### E.1 Periksa Satu per Satu
+
+| Periksa                      | Cara Memeriksa                   | Lolos |
+| ---------------------------- | -------------------------------- | ----- |
+| Baris viewport               | lihat kepala berkas HTML         | ☑     |
+| Gulir mendatar 360px         | mode perangkat 360px             | ☑     |
+| Galeri berubah kolom         | seret lebar dari 360px ke 1280px | ☑     |
+| Gambar tidak melebihi wadah  | periksa gambar terbesar          | ☑     |
+| Tabel lebar bergulir sendiri | gulir tabel di layar sempit      | ☑     |
+| Teks membesar                | naikkan ukuran huruf peramban    | ☑     |
+
+### E.2 Uji Tiga Lebar
+
+| Lebar  | Jumlah Kolom | Catatan                                                                                                          |
+| ------ | ------------ | ---------------------------------------------------------------------------------------------------------------- |
+| 360px  | 2 kolom      | Pada tampilan mobile terdapat bagian galeri yang tampil 1 kolom dan ada yang tampil 2 kolom sesuai ukuran elemen |
+| 768px  | 2 kolom      | Galeri tetap terdiri dari 2 kolom dan masih nyaman dibaca                                                        |
+| 1280px | 2 kolom      | Sidebar dan konten tampil berdampingan, sedangkan galeri tetap 2 kolom                                           |
+
+### E.4 Tiket Keluar
+
+| Pertanyaan                                               | Jawaban                                                                                                                                      |
+| -------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mengapa gaya dasar ditulis untuk layar sempit lebih dulu | Karena lebih mudah membuat tampilan untuk HP terlebih dahulu lalu menyesuaikannya untuk layar yang lebih besar                               |
+| Dari mana Anda menentukan lebar titik henti              | Dari percobaan saat mengubah ukuran layar dan melihat kapan tata letak perlu diubah                                                          |
+| Satu kasus luberan hari ini dan perbaikannya             | Tabel berpotensi meluber pada layar kecil, lalu diperbaiki dengan membuat tabel dapat digulir secara horizontal menggunakan overflow-x: auto |
+
+### E.5 Catatan untuk Pengampu
+
+**Bagian yang paling sulit:**
+
+Menentukan breakpoint yang tepat dan memastikan tampilan tetap rapi pada berbagai ukuran layar.
+
+**Yang ingin saya dibahas di kelas:**
+
+Cara menentukan breakpoint yang baik dan penerapan responsive design menggunakan Grid dan Flexbox pada proyek yang lebih kompleks.
