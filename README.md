@@ -145,7 +145,7 @@ Pada pertemuan 5 ini saya mempelajari dan menerapkan CSS Grid dan Flexbox untuk 
 | Bagian yang paling sulit           | Mengatur tampilan responsif pada layar kecil                |
 | Bagian yang ingin dibahas di kelas | Grid Area, Span, dan Responsive Layout menggunakan CSS Grid |
 
-# Worksheet Pertemuan 6 – Responsive
+## Pertemuan 6 – Responsive
 
 ## Bagian A – Pasang Viewport dan Cari Lebar Tetap
 
