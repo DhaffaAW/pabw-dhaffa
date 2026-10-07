@@ -1,17 +1,22 @@
-console.log("App.js berhasil dimuat");
+const profil = {
+  nama: "Dhaffa Arya Wiguna",
+  peran: "Mahasiswa Informatika yang belajar front-end",
+  keahlian: ["HTML", "CSS", "JavaScript"],
+  jumlahProyek: 6,
+};
 
-const namaLengkap = "Dhaffa Arya Wiguna";
+// Fungsi 1: Menyusun kalimat perkenalan dari satu object
+function buatPerkenalan({ nama, peran }) {
+  return `${nama} — ${peran}`;
+}
 
-const peran = "Mahasiswa Informatika yang belajar front-end";
+// Fungsi 2: Merapikan daftar keahlian menjadi satu baris teks
+const formatKeahlian = (daftar) => daftar.join(" · ");
 
-const keahlian = ["HTML", "CSS", "JavaScript"];
+console.log(buatPerkenalan(profil));
+console.log(formatKeahlian(profil.keahlian));
 
-const jumlahProyek = 6;
-
-window.namaLengkap = namaLengkap;
-window.keahlian = keahlian;
-window.jumlahProyek = jumlahProyek;
-
-const kalimat = `Nama saya ${namaLengkap}, saya seorang ${peran}, dan saya sedang mempelajari ${keahlian.length} keahlian.`;
-
-console.log(kalimat);
+// Supaya bisa diuji dari Console
+window.profil = profil;
+window.buatPerkenalan = buatPerkenalan;
+window.formatKeahlian = formatKeahlian;
