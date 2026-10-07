@@ -14,10 +14,6 @@ Topik halaman saya: Pemain Badminton Favorit Saya
 - Kolom form: Nama pemain, Negara, Ranking, Usia, Kategori
 - Gambar: Badminton.jpg
 
-## Catatan Penggunaan AI
-
-Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
-
 ## Pertemuan 4 - Design token halaman profil
 
 - Berkas gaya yang akan dibuat: tokens.css, base.css, layout.css, komponen.css, tema.css
@@ -208,3 +204,68 @@ Menentukan breakpoint yang tepat dan memastikan tampilan tetap rapi pada berbaga
 **Yang ingin saya dibahas di kelas:**
 
 Cara menentukan breakpoint yang baik dan penerapan responsive design menggunakan Grid dan Flexbox pada proyek yang lebih kompleks.
+
+## Pertemuan 8 – JavaScript Modern ES6+, Struktur Data, dan Array Methods
+
+Pada pertemuan 8 ini saya mempelajari dasar JavaScript modern menggunakan ES6+, meliputi penggunaan variabel const dan let, template literal, fungsi murni, object, array of object, serta array methods seperti map(), filter(), dan find().
+
+### Materi yang Dipelajari
+
+- const dan let
+- Template Literal
+- Fungsi murni (Pure Function)
+- Object dan Array of Object
+- map(), filter(), find()
+- Dasar debugging menggunakan Console
+- Membaca pesan error JavaScript
+
+### Data yang Digunakan
+
+Topik halaman saya tetap:
+Pemain Badminton Favorit Saya
+
+Data yang dipindahkan ke JavaScript:
+
+- Profil mahasiswa
+- Daftar keahlian
+- Daftar pemain badminton favorit
+
+### Fungsi yang Dibuat
+
+1. buatPerkenalan()
+   - Membuat kalimat perkenalan dari data profil
+
+2. formatKeahlian()
+   - Mengubah array keahlian menjadi teks yang lebih rapi
+
+### Array Methods yang Digunakan
+
+- map() untuk mengambil nama pemain
+- filter() untuk menampilkan pemain favorit
+- find() untuk mencari pemain berdasarkan kriteria tertentu
+
+### Hasil Pengujian
+
+- console.table() berhasil menampilkan data profil dan pemain
+- filter() berhasil menampilkan pemain favorit
+- find() berhasil menemukan pemain dari Indonesia
+- map() berhasil menghasilkan daftar nama pemain
+- Console tidak menampilkan error program
+
+### Penanganan Error
+
+Error yang ditemukan:
+
+1. ReferenceError: namaLengkap is not defined
+   - Penyebab: variabel dipanggil di luar scope
+   - Solusi: menggunakan data dari object profil
+
+2. Failed to load resource: favicon.ico
+   - Penyebab: browser mencari favicon yang tidak tersedia
+   - Solusi: diabaikan karena tidak memengaruhi program
+
+## Catatan Penggunaan AI
+
+Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
+
+Dalam pengerjaan worksheet P8, AI digunakan untuk membantu memahami konsep JavaScript ES6+, fungsi murni, array methods (map, filter, find), serta membantu membaca dan memahami pesan error pada Console. Implementasi kode, pengujian, debugging, pengisian worksheet, dan commit Git dilakukan sendiri.
