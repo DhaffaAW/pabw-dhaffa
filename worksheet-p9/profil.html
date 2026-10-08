@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemain Badminton Favorit Saya</title>
+
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="komponen.css" />
+    <link rel="stylesheet" href="tema.css" />
+    <link rel="stylesheet" href="responsif.css" />
+  </head>
+
+  <body id="top" class="page">
+    <header>
+      <nav class="top-nav">
+        <input type="checkbox" id="tema" class="pengalih-tema" />
+        <label for="tema" class="tombol-tema">Tema Gelap</label>
+
+        <div class="nav-logo">Pemain Badminton Favorit Saya</div>
+
+        <div class="nav-menu">
+          <a href="#beranda">Beranda</a>
+          <a href="#pemain-favorit">Pemain Favorit</a>
+          <a href="#tambah-pemain">Tambah Pemain</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="isi">
+      <aside class="sidebar">
+        <h3>Menu Cepat</h3>
+
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#pemain-favorit">Pemain Favorit</a></li>
+          <li><a href="#tambah-pemain">Tambah Pemain</a></li>
+        </ul>
+      </aside>
+
+      <section class="utama">
+        <section class="hero-banner" id="beranda">
+          <div class="hero-content">
+            <h2>An Se-young</h2>
+            <p class="hero-subtitle">Pemain Badminton Favorit Saya</p>
+            <p>
+              An Se-young adalah salah satu pemain tunggal putri asal Korea
+              Selatan yang menjadi favorit saya.
+            </p>
+          </div>
+        </section>
+
+        <section id="pemain-favorit" class="utama">
+          <h2>Daftar Pemain Badminton Favorit</h2>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Nama Pemain</th>
+                  <th scope="col">Negara</th>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Usia</th>
+                  <th scope="col">Kategori</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row">An Se-young</th>
+                  <td>Korea Selatan</td>
+                  <td>1</td>
+                  <td>24</td>
+                  <td>Tunggal Putri</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Anthony Sinisuka Ginting</th>
+                  <td>Indonesia</td>
+                  <td>49</td>
+                  <td>29</td>
+                  <td>Tunggal Putra</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Kim Won Ho</th>
+                  <td>Korea Selatan</td>
+                  <td>1</td>
+                  <td>27</td>
+                  <td>Ganda Putra</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Seo Seung Jae</th>
+                  <td>Korea Selatan</td>
+                  <td>1</td>
+                  <td>29</td>
+                  <td>Ganda Putra</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Alwi Farhan</th>
+                  <td>Indonesia</td>
+                  <td>10</td>
+                  <td>21</td>
+                  <td>Tunggal Putra</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="galeri">
+            <article class="kartu sorotan">
+              <h3>An Se-young</h3>
+              <p><strong>Negara:</strong> Korea Selatan</p>
+              <p><strong>Ranking:</strong> 1</p>
+              <p><strong>Usia:</strong> 24</p>
+              <p><strong>Kategori:</strong> Tunggal Putri</p>
+            </article>
+
+            <article class="kartu">
+              <h3>Anthony Sinisuka Ginting</h3>
+              <p><strong>Negara:</strong> Indonesia</p>
+              <p><strong>Ranking:</strong> 49</p>
+              <p><strong>Usia:</strong> 29</p>
+              <p><strong>Kategori:</strong> Tunggal Putra</p>
+            </article>
+
+            <article class="kartu">
+              <h3>Kim Won Ho</h3>
+              <p><strong>Negara:</strong> Korea Selatan</p>
+              <p><strong>Ranking:</strong> 1</p>
+              <p><strong>Usia:</strong> 27</p>
+              <p><strong>Kategori:</strong> Ganda Putra</p>
+            </article>
+
+            <article class="kartu">
+              <h3>Seo Seung Jae</h3>
+              <p><strong>Negara:</strong> Korea Selatan</p>
+              <p><strong>Ranking:</strong> 1</p>
+              <p><strong>Usia:</strong> 29</p>
+              <p><strong>Kategori:</strong> Ganda Putra</p>
+            </article>
+
+            <article class="kartu">
+              <h3>Alwi Farhan</h3>
+              <p><strong>Negara:</strong> Indonesia</p>
+              <p><strong>Ranking:</strong> 10</p>
+              <p><strong>Usia:</strong> 21</p>
+              <p><strong>Kategori:</strong> Tunggal Putra</p>
+            </article>
+          </div>
+
+          <div class="foto-profil">
+            <div>
+              <h2>Foto Pemain</h2>
+
+              <figure class="player-photo">
+                <img
+                  src="an se-young.webp"
+                  alt="An Se-young sedang bertanding dalam pertandingan Kejuaraan Dunia BWF 2026"
+                  width="640"
+                  height="360"
+                  loading="lazy"
+                />
+
+                <figcaption>
+                  An Se-young, salah satu pemain tunggal putri asal Korea
+                  Selatan yang menjadi favorit saya.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Proyek</h2>
+
+          <div id="filter">
+            <button data-kategori="semua" class="aktif">Semua</button>
+            <button data-kategori="web">Web</button>
+            <button data-kategori="data">Data</button>
+          </div>
+
+          <ul id="daftar"></ul>
+
+          <p id="pesan-kosong" hidden>Tidak ada proyek pada kategori itu.</p>
+        </section>
+
+        <section id="tambah-pemain">
+          <h2>Tambah Pemain Badminton</h2>
+
+          <form action="/simpan" method="post">
+            <div class="form-kolom">
+              <label for="nama-pemain">Nama Pemain</label>
+              <input type="text" id="nama-pemain" name="nama-pemain" required />
+            </div>
+
+            <div class="form-kolom">
+              <label for="negara">Negara</label>
+              <input type="text" id="negara" name="negara" required />
+            </div>
+
+            <div class="form-kolom">
+              <label for="ranking">Ranking Dunia</label>
+              <input
+                type="number"
+                id="ranking"
+                name="ranking"
+                min="1"
+                max="999"
+                required
+              />
+            </div>
+
+            <div class="form-kolom">
+              <label for="usia">Usia</label>
+              <input
+                type="number"
+                id="usia"
+                name="usia"
+                min="10"
+                max="60"
+                required
+              />
+            </div>
+
+            <div class="form-kolom">
+              <label for="kategori">Kategori</label>
+              <select id="kategori" name="kategori" required>
+                <option value="">Pilih kategori</option>
+                <option>Tunggal Putra</option>
+                <option>Tunggal Putri</option>
+                <option>Ganda Putra</option>
+                <option>Ganda Putri</option>
+                <option>Ganda Campuran</option>
+              </select>
+            </div>
+
+            <button type="submit">Simpan</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Dhaffa Arya Wiguna</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/dom.js"></script>
+  </body>
+</html>

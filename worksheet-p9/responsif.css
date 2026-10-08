@@ -1,0 +1,32 @@
+/* responsif.css */
+
+/* gaya dasar untuk layar sempit */
+.isi {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.galeri {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* tablet */
+@media (min-width: 48rem) {
+  .galeri {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* desktop */
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: 16rem 1fr;
+  }
+
+  .galeri {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
