@@ -24,11 +24,16 @@ function buatKartu(proyek) {
 function render(data) {
   daftarEl.textContent = "";
 
+  if (data.length === 0) {
+    pesanKosongEl.hidden = false;
+    return;
+  }
+
+  pesanKosongEl.hidden = true;
+
   data.forEach((proyek) => {
     daftarEl.append(buatKartu(proyek));
   });
-
-  pesanKosongEl.hidden = data.length > 0;
 }
 
 // tampil pertama kali
@@ -55,4 +60,35 @@ filterEl.addEventListener("click", (event) => {
 
   render(hasilFilter);
   tandaiTombolAktif(tombol);
+});
+
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const nama = formEl.querySelector("#nama-pemain");
+  const negara = formEl.querySelector("#negara");
+  const ranking = formEl.querySelector("#ranking");
+  const usia = formEl.querySelector("#usia");
+  const kategori = formEl.querySelector("#kategori");
+
+  const kolom = [nama, negara, ranking, usia, kategori];
+
+  let sah = true;
+
+  kolom.forEach((input) => {
+    if (input.value.trim() === "") {
+      input.setAttribute("aria-invalid", "true");
+      sah = false;
+    } else {
+      input.removeAttribute("aria-invalid");
+    }
+  });
+
+  if (!sah) {
+    alert("Semua kolom wajib diisi.");
+    kolom.find((input) => input.value.trim() === "")?.focus();
+    return;
+  }
+
+  alert("Data berhasil diperiksa.");
 });
