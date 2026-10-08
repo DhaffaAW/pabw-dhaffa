@@ -264,8 +264,92 @@ Error yang ditemukan:
    - Penyebab: browser mencari favicon yang tidak tersedia
    - Solusi: diabaikan karena tidak memengaruhi program
 
+## Pertemuan 9 – DOM, Event, dan Interaktivitas
+
+Pada pertemuan 9 ini, saya mempelajari materi baru mengenai:
+
+- Memilih elemen HTML menggunakan DOM.
+- Menampilkan data dari array ke halaman secara dinamis.
+- Membuat fungsi render() untuk memperbarui tampilan.
+- Menggunakan Event Listener dan Event Delegation.
+- Membuat filter berdasarkan kategori proyek.
+- Menampilkan pesan ketika hasil filter kosong.
+- Membuat validasi form menggunakan JavaScript.
+- Melakukan debugging menggunakan Console dan DevTools.
+
+### Menampilkan Data Proyek
+
+Data proyek disimpan dalam array daftarProyek pada app.js.
+Setiap data ditampilkan menjadi kartu menggunakan:
+
+function buatKartu(proyek) {
+const li = document.createElement("li");
+li.className = "kartu";
+li.textContent = proyek.judul;
+return li;
+}
+
+### Render Data
+
+Daftar proyek ditampilkan menggunakan fungsi:
+
+function render(data) {
+daftarEl.textContent = "";
+
+if (data.length === 0) {
+pesanKosongEl.hidden = false;
+return;
+}
+
+pesanKosongEl.hidden = true;
+
+data.forEach((proyek) => {
+daftarEl.append(buatKartu(proyek));
+});
+}
+
+### Filter Proyek
+
+Filter menggunakan Event Delegation sehingga cukup memasang satu Event Listener pada elemen induk.
+
+filterEl.addEventListener("click", (event) => {
+const tombol = event.target.closest("button");
+});
+
+Kategori yang tersedia:
+
+- Semua
+- Web
+- Data
+- Mobile
+
+### Status Tombol Aktif
+
+Tombol yang sedang dipilih diberi kelas aktif.
+
+function tandaiTombolAktif(tombolAktif) {
+document.querySelectorAll("#filter button").forEach((tombol) => {
+tombol.classList.toggle("aktif", tombol === tombolAktif);
+});
+}
+
+### Validasi Form
+
+Form tidak langsung dikirim karena menggunakan: event.preventDefault();
+validasi dilakukan pada kolom:
+
+- Nama Pemain
+- Negara
+- Ranking
+- Usia
+- Kategori
+
+kolom yang kosong akan diberi atribut: aria-invalid="true"
+
 ## Catatan Penggunaan AI
 
 Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
 
 Dalam pengerjaan worksheet P8, AI digunakan untuk membantu memahami konsep JavaScript ES6+, fungsi murni, array methods (map, filter, find), serta membantu membaca dan memahami pesan error pada Console. Implementasi kode, pengujian, debugging, pengisian worksheet, dan commit Git dilakukan sendiri.
+
+Dalam pengerjaan worksheet P9, AI saya gunakan untuk membantu menjelaskan konsep DOM, Event Listener, Event Delegation, dan Validasi Form. serta Membantu memahami pesan error dan proses debugging. Seluruh implementasi kode, pengujian, perbaikan error, serta penyesuaian dengan topik Pemain Badminton Favorit saya dibantu dengan AI.
