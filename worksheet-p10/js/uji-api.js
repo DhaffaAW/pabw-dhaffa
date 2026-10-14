@@ -1,18 +1,38 @@
 import { ALAMAT } from "./api.js";
 
-async function muat() {
-  const respons = await fetch(ALAMAT);
+const pesanApi = document.querySelector("#pesan-api");
 
-  console.log("status", respons.status, "ok", respons.ok);
+export async function ambilNotisia() {
+  try {
+    if (pesanApi) {
+      pesanApi.textContent = "Sedang memuat data...";
+    }
 
-  if (!respons.ok) {
-    throw new Error("status " + respons.status);
+    const respons = await fetch(ALAMAT);
+
+    if (!respons.ok) {
+      throw new Error("status " + respons.status);
+    }
+
+    const data = await respons.json();
+
+    if (pesanApi) {
+      pesanApi.textContent = data.length
+        ? `Data berhasil dimuat: ${data.length} postingan.`
+        : "Belum ada data yang tersedia.";
+    }
+
+    return data;
+  } catch (galat) {
+    console.error("gagal memuat", galat.message);
+
+    if (pesanApi) {
+      pesanApi.textContent =
+        "Data gagal dimuat. Periksa koneksi internet atau coba lagi.";
+    }
+
+    throw galat;
   }
-
-  console.log("Content-Type", respons.headers.get("content-type"));
-
-  return respons.json();
 }
 
-// Agar bisa dipanggil dari Console browser
-window.muat = muat;
+window.ambilNotisia = ambilNotisia;
