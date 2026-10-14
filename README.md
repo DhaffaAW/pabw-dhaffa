@@ -346,6 +346,23 @@ validasi dilakukan pada kolom:
 
 kolom yang kosong akan diberi atribut: aria-invalid="true"
 
+## Pertemuan 10 – JavaScript Asinkron: fetch, Promise, dan JSON
+
+Pada pertemuan 10 ini, saya mempelajari penggunaan async dan await dalam JavaScript, Mengambil data dari API menggunakan fetch(), Memeriksa status respons HTTP menggunakan respons.ok, Membaca data JSON dan memisahkan logika API dari tampilan aplikasi, serta Menangani kondisi loading, berhasil, data kosong, dan gagal.
+
+Pada pertemuan ini, aplikasi mengambil data berita dari API menggunakan JSONPlaceholder. Proses pengambilan data dipisahkan ke dalam beberapa berkas JavaScript agar kode lebih terstruktur.
+
+- js/api.js — mengambil data API, memeriksa status respons, dan membaca data JSON.
+- js/app.js — menampilkan data ke halaman serta menangani kondisi loading, data kosong, dan kesalahan.
+- js/uji-api.js — menguji pemanggilan API dan menampilkan status hasil pengujian.
+
+Pengujian juga dilakukan melalui browser dengan memeriksa beberapa kondisi,
+
+- keadaan berhasil: data berhasil diambil dan ditampilkan.
+- keadaan gagal: respons HTTP 404 ditangani dan pesan kesalahan ditampilkan.
+- keadaan kosong: aplikasi menampilkan pesan Belum ada notisia.
+- keadaan memuat: aplikasi menampilkan pesan Memuat... selama data sedang diambil.
+
 ## Catatan Penggunaan AI
 
 Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
@@ -353,3 +370,5 @@ Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu unt
 Dalam pengerjaan worksheet P8, AI digunakan untuk membantu memahami konsep JavaScript ES6+, fungsi murni, array methods (map, filter, find), serta membantu membaca dan memahami pesan error pada Console. Implementasi kode, pengujian, debugging, pengisian worksheet, dan commit Git dilakukan sendiri.
 
 Dalam pengerjaan worksheet P9, AI saya gunakan untuk membantu menjelaskan konsep DOM, Event Listener, Event Delegation, dan Validasi Form. serta Membantu memahami pesan error dan proses debugging. Seluruh implementasi kode, pengujian, perbaikan error, serta penyesuaian dengan topik Pemain Badminton Favorit saya dibantu dengan AI.
+
+Dalam pengerjaan worksheet P10, AI saya gunakan untuk menjelaskan konsep async/await, pemeriksaan respons HTTP menggunakan respons.ok, pembacaan JSON, penanganan galat dengan try/catch, serta saran perbaikan dan pengujian kode. Untuk bagian yang saya kerjakan sendiri, terdapat pada saat menjalankan dan menguji kode di browser, memeriksa hasil melalui DevTools, menguji keadaan berhasil, gagal, memuat, dan kosong, serta mengevaluasi hasil pengujian.
