@@ -1,28 +1,20 @@
-import { ALAMAT } from "./api.js";
+import { ambilNotisia } from "./api.js";
 
 const pesanApi = document.querySelector("#pesan-api");
 
-export async function ambilNotisia() {
+async function ujiApi() {
   try {
     if (pesanApi) {
       pesanApi.textContent = "Sedang memuat data...";
     }
 
-    const respons = await fetch(ALAMAT);
-
-    if (!respons.ok) {
-      throw new Error("status " + respons.status);
-    }
-
-    const data = await respons.json();
+    const data = await ambilNotisia();
 
     if (pesanApi) {
       pesanApi.textContent = data.length
         ? `Data berhasil dimuat: ${data.length} postingan.`
         : "Belum ada data yang tersedia.";
     }
-
-    return data;
   } catch (galat) {
     console.error("gagal memuat", galat.message);
 
@@ -30,9 +22,7 @@ export async function ambilNotisia() {
       pesanApi.textContent =
         "Data gagal dimuat. Periksa koneksi internet atau coba lagi.";
     }
-
-    throw galat;
   }
 }
 
-window.ambilNotisia = ambilNotisia;
+ujiApi();
