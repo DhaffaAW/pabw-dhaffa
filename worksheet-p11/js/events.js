@@ -1,5 +1,4 @@
-import { state, ubahKategori } from "./state.js";
-import { render } from "./dom.js";
+import { state, pilihKategori } from "./state.js";
 
 export function pasangPendengar() {
   const filterEl = document.querySelector("#filter");
@@ -9,15 +8,7 @@ export function pasangPendengar() {
     const tombol = event.target.closest("button");
     if (!tombol) return;
 
-    ubahKategori(tombol.dataset.kategori);
-
-    const hasilFilter = state.daftarProyek.filter(
-      (proyek) =>
-        state.kategoriAktif === "semua" ||
-        proyek.kategori === state.kategoriAktif,
-    );
-
-    render(hasilFilter);
+    pilihKategori(tombol.dataset.kategori);
 
     filterEl.querySelectorAll("button").forEach((item) => {
       item.classList.toggle("aktif", item === tombol);
