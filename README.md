@@ -363,6 +363,40 @@ Pengujian juga dilakukan melalui browser dengan memeriksa beberapa kondisi,
 - keadaan kosong: aplikasi menampilkan pesan Belum ada notisia.
 - keadaan memuat: aplikasi menampilkan pesan Memuat... selama data sedang diambil.
 
+## Pertemuan 11 – Modul, State, dan Penyimpanan Klien
+
+Pada pertemuan 11 ini, saya memecah kode aplikasi menjadi beberapa modul JavaScript agar setiap file memiliki tugas yang lebih jelas.
+
+### Pemecahan Modul
+
+- app.js: menjalankan aplikasi dan memasang event listener
+- data.js: menyimpan data profil dan daftar proyek
+- dom.js: mengatur tampilan dan proses render
+- events.js: menangani interaksi pengguna dan validasi formulir
+- state.js: mengelola state dan perubahan kategori filter
+- storage.js: menyimpan, memuat, dan menghapus data dari localStorage
+
+### Pengelolaan State
+
+State aplikasi dikelola melalui objek state. Perubahan kategori filter dilakukan menggunakan fungsi di state.js, kemudian tampilan diperbarui menggunakan render(state).
+
+### Penyimpanan localStorage
+
+Aplikasi menyimpan pilihan kategori filter agar tetap aktif setelah halaman di-refresh. Data diubah menjadi teks menggunakan JSON.stringify() dan dibaca kembali menggunakan JSON.parse(). Aplikasi juga menangani data penyimpanan yang rusak menggunakan try...catch dan pemeriksaan versi. Pengujian dilakukan dengan memasukkan data tidak valid melalui Console browser. Halaman tetap dapat dibuka dan fungsi muat() mengembalikan null ketika data penyimpanan tidak dapat digunakan.
+
+### Pengujian
+
+Pengujian yang saya lakukan:
+
+- Memeriksa filter Web, Data, dan Semua
+- Memeriksa pilihan filter setelah halaman di-refresh
+- Memeriksa tombol Atur Ulang Pilihan
+- Menguji validasi formulir kosong dan formulir terisi lengkap
+- Menguji penanganan data localStorage yang rusak
+- Memastikan Console browser bersih setelah halaman di-refresh
+- Node.js: v24.21.0
+- npm: 11.19.0
+
 ## Catatan Penggunaan AI
 
 Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
@@ -372,3 +406,5 @@ Dalam pengerjaan worksheet P8, AI digunakan untuk membantu memahami konsep JavaS
 Dalam pengerjaan worksheet P9, AI saya gunakan untuk membantu menjelaskan konsep DOM, Event Listener, Event Delegation, dan Validasi Form. serta Membantu memahami pesan error dan proses debugging. Seluruh implementasi kode, pengujian, perbaikan error, serta penyesuaian dengan topik Pemain Badminton Favorit saya dibantu dengan AI.
 
 Dalam pengerjaan worksheet P10, AI saya gunakan untuk menjelaskan konsep async/await, pemeriksaan respons HTTP menggunakan respons.ok, pembacaan JSON, penanganan galat dengan try/catch, serta saran perbaikan dan pengujian kode. Untuk bagian yang saya kerjakan sendiri, terdapat pada saat menjalankan dan menguji kode di browser, memeriksa hasil melalui DevTools, menguji keadaan berhasil, gagal, memuat, dan kosong, serta mengevaluasi hasil pengujian.
+
+Dalam pengerjaan worksheet P11, Saya menggunakan AI sebagai bantuan untuk memahami konsep modularisasi, state, localStorage, validasi formulir, serta langkah pengujian dan pemeriksaan Git. Saya juga menggunakan bantuan AI untuk meninjau kode dan menyusun dokumentasi. Saya menjalankan perintah, memeriksa kode di VS Code, menguji aplikasi di browser, dan melakukan commit serta push ke GitHub sendiri.
