@@ -1,8 +1,10 @@
-import { state, pilihKategori } from "./state.js";
+import { pilihKategori, aturUlangState } from "./state.js";
+import { aturUlang } from "./storage.js";
 
 export function pasangPendengar() {
   const filterEl = document.querySelector("#filter");
   const formEl = document.querySelector("form");
+  const resetEl = document.querySelector("#atur-ulang");
 
   filterEl.addEventListener("click", (event) => {
     const tombol = event.target.closest("button");
@@ -12,6 +14,15 @@ export function pasangPendengar() {
 
     filterEl.querySelectorAll("button").forEach((item) => {
       item.classList.toggle("aktif", item === tombol);
+    });
+  });
+
+  resetEl.addEventListener("click", () => {
+    aturUlang();
+    aturUlangState();
+
+    filterEl.querySelectorAll("button").forEach((item) => {
+      item.classList.toggle("aktif", item.dataset.kategori === "semua");
     });
   });
 
