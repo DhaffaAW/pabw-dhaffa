@@ -397,6 +397,39 @@ Pengujian yang saya lakukan:
 - Node.js: v24.21.0
 - npm: 11.19.0
 
+## Pertemuan 12 - Build Tooling, npm, dan Framework SPA
+
+Pada pertemuan 12, saya mempelajari penggunaan npm, Vite, dan Vue untuk membangun aplikasi berbasis Single Page Application (SPA). Proyek P11 dipindahkan ke proyek Vue dengan memisahkan tampilan menjadi beberapa komponen.
+
+### Komponen dan State
+
+Aplikasi dibagi menjadi empat komponen, yaitu KepalaProfil, TombolFilter, DaftarProyek, dan FormKontak. Data profil diberikan melalui props, sedangkan state reaktif dikelola menggunakan reactive() dari Vue. Perubahan tampilan dikelola oleh Vue tanpa perlu memanggil render(state) secara manual.
+
+### Penyimpanan dan Pengujian
+
+Pilihan kategori filter disimpan menggunakan localStorage. Fungsi onMounted() digunakan untuk memuat pilihan tersimpan, sedangkan watch() mengamati perubahan kategori dan menyimpan pilihan terbaru. Pengujian mencakup filter kategori, pemulihan pilihan setelah halaman di-refresh, tombol reset, dan penanganan data penyimpanan yang rusak.
+
+### Build Produksi
+
+Aplikasi berhasil dibangun menggunakan npm run build. Hasil build tersimpan di folder dist/ dan dapat dijalankan melalui npm run preview. Folder node_modules/ dan dist/ tidak dimasukkan ke Git karena dependensi dapat dipasang kembali melalui npm install dan hasil build dapat dibuat ulang.
+
+| Pengukuran           | Sebelum build (npm run dev) | Sesudah build (npm run preview) |
+| -------------------- | --------------------------: | ------------------------------: |
+| Data yang ditransfer |                      3.4 kB |                           485 B |
+| Ukuran resources     |                      1.5 MB |                         73.9 kB |
+| Jumlah request       |                          21 |                               3 |
+
+Catatan: hasil pengukuran dapat berbeda bergantung pada cache browser dan kondisi pengujian.
+
+### Versi Perangkat
+
+- Node.js: v24.21.0
+- npm: 11.19.0
+
+### Pemindahan API dari P10
+
+Berkas js/api.js dari P10 dipindahkan ke src/api.js pada P12 tanpa mengubah isinya. Fungsi pengambilan data API tetap berada di berkas tersebut.
+
 ## Catatan Penggunaan AI
 
 Dalam pengerjaan worksheet P3, saya banyak menggunakan AI sebagai alat bantu untuk memahami materi dan alur pengerjaan. AI membantu saya menjelaskan konsep dasar HTML5 semantik, memberikan contoh syntax, membantu memahami instruksi pada worksheet, serta membantu pemeriksaan dan pengujian halaman profil yang telah dibuat.
@@ -408,3 +441,5 @@ Dalam pengerjaan worksheet P9, AI saya gunakan untuk membantu menjelaskan konsep
 Dalam pengerjaan worksheet P10, AI saya gunakan untuk menjelaskan konsep async/await, pemeriksaan respons HTTP menggunakan respons.ok, pembacaan JSON, penanganan galat dengan try/catch, serta saran perbaikan dan pengujian kode. Untuk bagian yang saya kerjakan sendiri, terdapat pada saat menjalankan dan menguji kode di browser, memeriksa hasil melalui DevTools, menguji keadaan berhasil, gagal, memuat, dan kosong, serta mengevaluasi hasil pengujian.
 
 Dalam pengerjaan worksheet P11, Saya menggunakan AI sebagai bantuan untuk memahami konsep modularisasi, state, localStorage, validasi formulir, serta langkah pengujian dan pemeriksaan Git. Saya juga menggunakan bantuan AI untuk meninjau kode dan menyusun dokumentasi. Saya menjalankan perintah, memeriksa kode di VS Code, menguji aplikasi di browser, dan melakukan commit serta push ke GitHub sendiri.
+
+Dalam pengerjaan worksheet P12, saya menggunakan AI sebagai bantuan untuk memahami npm, Vite, Vue, komponen, props, reactive state, localStorage, serta proses build dan preview produksi. AI juga membantu menyusun langkah pengujian dan dokumentasi. Saya menjalankan perintah, memeriksa kode di VS Code, menguji aplikasi di browser, membandingkan hasil pengukuran, dan melakukan pemeriksaan Git sendiri.
