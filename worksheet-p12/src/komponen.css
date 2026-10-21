@@ -87,8 +87,8 @@ button {
   outline-offset: 2px;
 }
 
-/* Validasi */
-input:user-invalid,
+/* Validasi setelah input disentuh */
+input:user-invalid:not(:placeholder-shown),
 select:user-invalid {
   border-color: var(--color-danger);
   border-width: 2px;

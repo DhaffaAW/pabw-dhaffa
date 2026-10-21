@@ -6,16 +6,19 @@ export const profil = {
 
 export const daftarProyek = [
   {
+    id: 1,
     judul: "Halaman Profil",
     kategori: "web",
     selesai: true,
   },
   {
+    id: 2,
     judul: "Website Badminton",
     kategori: "web",
     selesai: true,
   },
   {
+    id: 3,
     judul: "Analisis Ranking BWF",
     kategori: "data",
     selesai: false,
