@@ -1,5 +1,8 @@
+
 <script setup>
-import { state, pilihKategori, aturUlangState } from "../state.js";
+import { state, pilihKategori } from "../state.js";
+
+const emit = defineEmits(["reset"]);
 
 const kategori = [
   { label: "Semua", nilai: "semua" },
@@ -25,7 +28,9 @@ const kategori = [
         {{ item.label }}
       </button>
 
-      <button type="button" @click="aturUlangState">Atur Ulang Pilihan</button>
+      <button type="button" @click="emit('reset')">
+        Atur Ulang Pilihan
+      </button>
     </div>
   </section>
 </template>
