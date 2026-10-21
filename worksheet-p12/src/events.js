@@ -1,0 +1,59 @@
+import { pilihKategori, aturUlangState } from "./state.js";
+import { aturUlang } from "./storage.js";
+
+export function pasangPendengar() {
+  const filterEl = document.querySelector("#filter");
+  const formEl = document.querySelector("form");
+  const resetEl = document.querySelector("#atur-ulang");
+
+  filterEl.addEventListener("click", (event) => {
+    const tombol = event.target.closest("button");
+    if (!tombol) return;
+
+    pilihKategori(tombol.dataset.kategori);
+
+    filterEl.querySelectorAll("button").forEach((item) => {
+      item.classList.toggle("aktif", item === tombol);
+    });
+  });
+
+  resetEl.addEventListener("click", () => {
+    aturUlang();
+    aturUlangState();
+
+    filterEl.querySelectorAll("button").forEach((item) => {
+      item.classList.toggle("aktif", item.dataset.kategori === "semua");
+    });
+  });
+
+  formEl.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const kolom = [
+      formEl.querySelector("#nama-pemain"),
+      formEl.querySelector("#negara"),
+      formEl.querySelector("#ranking"),
+      formEl.querySelector("#usia"),
+      formEl.querySelector("#kategori"),
+    ];
+
+    let sah = true;
+
+    kolom.forEach((input) => {
+      if (input.value.trim() === "") {
+        input.setAttribute("aria-invalid", "true");
+        sah = false;
+      } else {
+        input.removeAttribute("aria-invalid");
+      }
+    });
+
+    if (!sah) {
+      alert("Semua kolom wajib diisi.");
+      kolom.find((input) => input.value.trim() === "")?.focus();
+      return;
+    }
+
+    alert("Data berhasil diperiksa.");
+  });
+}
